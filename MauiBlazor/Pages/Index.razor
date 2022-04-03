@@ -1,0 +1,9 @@
+﻿@page "/"
+@inject NavigationManager NavigationManager
+<h1>ININDEX</h1>
+@code {
+	protected override void OnInitialized()
+	{
+		NavigationManager.NavigateTo("/index");
+	}
+}

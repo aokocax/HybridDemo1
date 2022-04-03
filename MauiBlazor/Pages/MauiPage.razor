@@ -1,0 +1,18 @@
+﻿@page "/mauipage"
+<a href="javascript:history.back();">Back</a>
+<h3>MAUI Page</h3>
+
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+         var status = await Permissions.RequestAsync<Permissions.StorageWrite>();
+            if (status == PermissionStatus.Granted)
+            {
+               var  pickedFile = await FilePicker.PickAsync();
+                if (pickedFile != null)
+                {
+                }
+            }        
+       
+    }
+}
